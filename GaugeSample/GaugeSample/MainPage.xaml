@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:gauge="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms"
+             x:Class="GaugeSample.MainPage">
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+
+        <gauge:SfCircularGauge HeightRequest="300" WidthRequest="300" HorizontalOptions="Center" VerticalOptions="Center">
+            <gauge:SfCircularGauge.Scales>
+                <gauge:Scale  StartAngle="185" SweepAngle="270" ShowTicks="False" ShowLabels="False"  ShowRim="False" >
+                    <gauge:Scale.Pointers>
+                        <gauge:RangePointer RangeStart="0"  RangeCap="Both" x:Name="rangePointer" EnableAnimation="True" Color="Black" StartOffset="0.9" EndOffset ="1" />
+                    </gauge:Scale.Pointers>
+                </gauge:Scale>
+            </gauge:SfCircularGauge.Scales>
+
+            <gauge:SfCircularGauge.Annotations>
+                <gauge:GaugeAnnotation Angle="90" >
+                    <gauge:GaugeAnnotation.View>
+                        <Image BackgroundColor="LightSkyBlue" WidthRequest="100" HeightRequest="100" Source="icon.png" />
+                    </gauge:GaugeAnnotation.View>
+                </gauge:GaugeAnnotation>
+            </gauge:SfCircularGauge.Annotations>
+        </gauge:SfCircularGauge>
+    </StackLayout>
+</ContentPage>
